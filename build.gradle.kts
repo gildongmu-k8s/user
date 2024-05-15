@@ -36,7 +36,14 @@ dependencies {
     runtimeOnly ("io.jsonwebtoken:jjwt-jackson:0.12.5")
     implementation("org.hibernate:hibernate-validator:8.0.1.Final")
     runtimeOnly("com.mysql:mysql-connector-j")
+    implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
     implementation("org.springframework.cloud:spring-cloud-starter-aws:2.2.6.RELEASE")
+}
+
+dependencyManagement {
+    imports {
+        mavenBom("org.springframework.cloud:spring-cloud-dependencies:2023.0.1")
+    }
 }
 
 tasks.withType<Test> {
