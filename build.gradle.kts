@@ -29,7 +29,14 @@ dependencies {
     compileOnly("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    implementation("org.springframework.boot:spring-boot-starter-security")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    implementation ("io.jsonwebtoken:jjwt-api:0.12.5")
+    runtimeOnly ("io.jsonwebtoken:jjwt-impl:0.12.5")
+    runtimeOnly ("io.jsonwebtoken:jjwt-jackson:0.12.5")
+    implementation("org.hibernate:hibernate-validator:8.0.1.Final")
+    runtimeOnly("com.mysql:mysql-connector-j")
+    implementation("org.springframework.cloud:spring-cloud-starter-aws:2.2.6.RELEASE")
 }
 
 tasks.withType<Test> {
